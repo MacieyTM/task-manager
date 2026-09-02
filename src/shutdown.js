@@ -16,7 +16,7 @@ function setupGracefulShutdown(server) {
       console.log('HTTP server closed.');
 
       try {
-        await database.end();
+        await database.close();
 
         console.log('Database connection closed.');
 
